@@ -17,22 +17,32 @@
   margin-left: 5%;
 }
 
+/*18/10/2016 WORKING ON:*/
+/*FOTO FABIO*/
 .pr {
-  width: 95%; 
-  position: relative; 
-  top:-197px; 
-  left: 4px
+  
+  position: absolute;
+  width: 100%;
+
+  /*
+  PER TAGLIARE L'IMMAGINE AL CENTRO:
+  */
+  top:-10%;
+   
+  margin-left: 0%
 }
 
-
+/*DIV ROSSO*/
 #dd1 {
-    height: 28%;
-    width: 97%;
-    position: relative;
-    top: -79px;
+    height: 76%;
+    width: 95%;
+    position: fixed;
+    top: 5%;
+    margin-left: 2%;
     overflow: hidden;
-    background: red;
+    background: black;
 }
+/**/
 
 #d1 {
   -ms-transform: rotate(9deg); /* IE 9 */
