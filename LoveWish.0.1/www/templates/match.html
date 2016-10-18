@@ -1,0 +1,56 @@
+<ion-view title="Match" id="page11" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="">
+            <!--   <img src="img/GqwWBYe9TLyFBjipjYxd_8876509-lily-pretty-girl.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">-->
+            <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                <ion-slide>
+                    <div class="box blue">
+                        <img src="img/GqwWBYe9TLyFBjipjYxd_8876509-lily-pretty-girl.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box yellow">
+                        <img src="img/GqwWBYe9TLyFBjipjYxd_8876509-lily-pretty-girl.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img src="img/GqwWBYe9TLyFBjipjYxd_8876509-lily-pretty-girl.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+        <form id="match-form9" class="list ">
+            <!--<ion-item class="range range-assertive " id="match-range3">Range
+                <input type="range" value="0" min="0" max="6">
+            </ion-item>-->
+            <img id="1h" ng-click="cuore(1)" src="img/Heart_icon_red_hollow.png" width="20%" height="auto" style="position: relative; display: block;">
+            <img id="2h" ng-click="cuore(2)" src="img/Heart_icon_red_hollow.png" width="20%" height="auto" style="position: relative; display: block; margin-left: 20%; margin-top: -19%;">
+            <img id="3h" ng-click="cuore(3)" src="img/Heart_icon_red_hollow.png" width="20%" height="auto" style="position: relative; display: block; margin-left: 40%; margin-top: -19%;">
+            <img id="4h" ng-click="cuore(4)" src="img/Heart_icon_red_hollow.png" width="20%" height="auto" style="position: relative; display: block; margin-left: 60%; margin-top: -19%;">
+            <img id="5h" ng-click="cuore(5)" src="img/Heart_icon_red_hollow.png" width="20%" height="auto" style="position: relative; display: block; margin-left: 80%; margin-top: -19%;">
+            <button id="match-button32" class=" button button-positive  button-block ">Ok</button>
+        </form>
+        <script>
+            $(document).ready(function() { 
+                for(var i = 0; i < 5; i++)
+                    document.getElementById("imgClickAndChange" + (i+1)).onclick = function() {changeImage(i+1)};
+             });
+            
+            
+            function changeImage(index) {
+                debugger;
+                for(var i = 0; i < index; i++){
+                    if (document.getElementById("imgClickAndChange" + (i+1)).src == "img/Heart_icon_red_hollow.png") 
+                    {
+                        document.getElementById("imgClickAndChange" + (i+1)).src = "img/Heart_icon_red_hollow_red.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("imgClickAndChange" + (i+1)).src = "img/Heart_icon_red_hollow.png";
+                    }
+                }
+            }
+        </script>
+    </ion-content>
+</ion-view>

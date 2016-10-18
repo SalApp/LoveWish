@@ -1,0 +1,51 @@
+.f1 {
+  width: 100%; 
+  box-shadow: 4px 4px 25px #111111;
+}
+
+.pt2 {
+    position: relative;
+    top: -346px;
+    left: -90px;
+    height: 23px;
+}
+
+.imgProfile{
+  position: relative;
+  height: 30%;
+  width: 30%;
+  margin-left: 5%;
+}
+
+.pr {
+  width: 95%; 
+  position: relative; 
+  top:-197px; 
+  left: 4px
+}
+
+
+#dd1 {
+    height: 28%;
+    width: 97%;
+    position: relative;
+    top: -79px;
+    overflow: hidden;
+    background: red;
+}
+
+#d1 {
+  -ms-transform: rotate(9deg); /* IE 9 */
+  -webkit-transform: rotate(9deg); /* Chrome, Safari, Opera */
+  transform: rotate(9deg);
+  top: 55px;
+  
+}
+
+#d2 {
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+  transform: rotate(-5deg);
+  top: -150px;
+  left: 210px;
+}
