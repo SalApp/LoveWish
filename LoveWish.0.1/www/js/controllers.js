@@ -4,8 +4,18 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('profileCtrl', function ($scope) {
+    .controller('profileCtrl', function ($scope, $http) {
+        debugger;
+        $http.get("http://localhost:8080/LoveWishBknd/webresources/generic").then(function(resp){
+            //alert("Success " + resp.data);
+            var div = document.getElementById('Ciao');
 
+            div.innerHTML = div.innerHTML + resp.data;
+            //console.log('Success', resp); // JSON object
+        }, function(err){
+            alert("Err" + err)
+            //console.error('ERR', err);
+        })
     })
 
     .controller('loginCtrl', function ($scope) {
