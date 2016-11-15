@@ -23,7 +23,12 @@ angular.module('app.controllers', [])
     })
 
     .controller('signUpCtrl', function ($scope) {
-
+        debugger;
+        $scope.idSubmit = function() {
+        // using the "this" construct to pass in ng-model identified input data.
+            debugger;
+            _id = this.id_entry;
+        }
     })
 
     .controller('settingsCtrl', function ($scope) {
