@@ -29,13 +29,14 @@ angular.module('app.controllers', [])
           debugger;
           var name = "name="+$scope.$$childHead.name;
           var lastname = "lastname="+$scope.$$childHead.lastname;
-          var bithdate = "bithdate="+$scope.$$childHead.birthdate;
-          var city = "city="+$scope.$$childHead.city;
+          var birthdate = "birthdate="+$scope.$$childHead.birthdate;
+          var sex = "city="+$scope.$$childHead.sex;
+		  var city = "city="+$scope.$$childHead.city;
           var email = "email="+$scope.$$childHead.email;
           var password = "password="+$scope.$$childHead.password;
-          var parameters = name + "&" + lastname + "&" + bithdate + "&" + city + "&" + email + "&" + password;
+          var parameters = name + "&" + lastname + "&" + birthdate + "&" + city + "&" + email + "&" + password;
           var url = "http://192.168.1.67:8084/LoveWishBknd/webresources/generic?"+parameters;
-          http.get(url).then(function(resp){
+          $http.get(url).then(function(resp){
               debugger;
                 alert(resp);
         
