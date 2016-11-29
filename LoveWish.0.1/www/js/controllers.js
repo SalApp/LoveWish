@@ -6,14 +6,14 @@ angular.module('app.controllers', [])
 
     .controller('profileCtrl', function ($scope, $http) {
         debugger;
-        $http.get("http://localhost:8080/LoveWishBknd/webresources/generic").then(function(resp){
+        $http.get("http://192.168.1.67:8080/LoveWishBknd/webresources/generic").then(function(resp){
             //alert("Success " + resp.data);
             var div = document.getElementById('Ciao');
 
             div.innerHTML = div.innerHTML + resp.data;
             //console.log('Success', resp); // JSON object
         }, function(err){
-            alert("Err" + err)
+            alert("Err " + err.data)
             //console.error('ERR', err);
         })
     })
