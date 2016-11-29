@@ -6,7 +6,8 @@ angular.module('app.controllers', [])
 
     .controller('profileCtrl', function ($scope, $http) {
         debugger;
-        $http.get("http://192.168.1.67:8080/LoveWishBknd/webresources/generic").then(function(resp){
+        $http.get("http://192.168.1.67:8084/LoveWishBknd/webresources/generic").then(function(resp){
+
             //alert("Success " + resp.data);
             var div = document.getElementById('Ciao');
 
@@ -22,8 +23,28 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('signUpCtrl', function ($scope) {
-
+    .controller('signUpCtrl', function ($scope,$http) {
+        $scope.idSubmit = function() {
+        // using the "this" construct to pass in ng-model identified input data.
+          debugger;
+          var name = "name="+$scope.$$childHead.name;
+          var lastname = "lastname="+$scope.$$childHead.lastname;
+          var bithdate = "bithdate="+$scope.$$childHead.birthdate;
+          var city = "city="+$scope.$$childHead.city;
+          var email = "email="+$scope.$$childHead.email;
+          var password = "password="+$scope.$$childHead.password;
+          var parameters = name + "&" + lastname + "&" + bithdate + "&" + city + "&" + email + "&" + password;
+          var url = "http://192.168.1.67:8084/LoveWishBknd/webresources/generic?"+parameters;
+          http.get(url).then(function(resp){
+              debugger;
+                alert(resp);
+        
+            }, function(err){
+                debugger;
+                alert("Err" + err)
+            })
+            //alert($scope.$$childHead.lastname);
+        }
     })
 
     .controller('settingsCtrl', function ($scope) {
